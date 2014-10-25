@@ -1,0 +1,17 @@
+{
+    "name": "fg/yii2-url-alias",
+    "description": "Yii2 url alias",
+    "license": "MIT LICENCE",
+    "authors": [
+        {
+            "name": "Fatih GÜRSOY",
+            "email": "fatihgursoy@ymail.com"
+        }
+    ],
+    "require": {},
+    "autoload"   : {
+        "psr-4": {
+            "fg\\UrlAlias\\": ""
+        }
+    }
+}
