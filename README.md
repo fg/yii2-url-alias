@@ -43,7 +43,8 @@ INSERT INTO `url_rule` (`id`, `slug`, `route`, `params`, `status`) VALUES
             'rules' => [
                 [
                     'class' => 'fg\UrlAlias\components\BaseUrlRule',
-                    'connectionID' => 'db'
+                    'connectionID'  => 'db',
+                    'redirect301'   => true //if you want 301 redirect
                 ]
                 ...
             ]
