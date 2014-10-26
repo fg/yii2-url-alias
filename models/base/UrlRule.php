@@ -1,6 +1,6 @@
 <?php
 
-namespace fg\UrlAlias\models\base;
+namespace app\models\base;
 
 use Yii;
 
@@ -11,6 +11,7 @@ use Yii;
  * @property string $slug
  * @property string $route
  * @property string $params
+ * @property integer $redirect
  * @property integer $status
  */
 class UrlRule extends \yii\db\ActiveRecord
@@ -30,7 +31,7 @@ class UrlRule extends \yii\db\ActiveRecord
     {
         return [
             [['slug', 'route'], 'required'],
-            [['status'], 'integer'],
+            [['redirect', 'status'], 'integer'],
             [['slug', 'route', 'params'], 'string', 'max' => 255]
         ];
     }
@@ -41,10 +42,11 @@ class UrlRule extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id'     => 'ID',
-            'slug'   => 'Slug',
-            'route'  => 'Route',
+            'id' => 'ID',
+            'slug' => 'Slug',
+            'route' => 'Route',
             'params' => 'Params',
+            'redirect' => 'Redirect',
             'status' => 'Status',
         ];
     }
